@@ -1,93 +1,8 @@
-<?php
-/*
- *
- * Use the examples below to add your own servers. Coded by clone1018 [?]
- *
- */
-$title = "Server Uptime Status"; // website's title
-$servers = array(
-
-    'Server ID' => array(
-        'ip' => 'id.awh.my.id',
-        'port' => 80,
-        'info' => 'FCCDCI',
-        'purpose' => 'SERVER PREMIUM'
-    ),
-    'Server ID 1' => array(
-        'ip' => 'id1.awh.my.id',
-        'port' => 80,
-        'info' => 'Y-NETWORKS',
-        'purpose' => 'SERVER PREMIUM'
-    ),
-    'Server ID 2' => array(
-        'ip' => 'id2.awh.my.id',
-        'port' => 80,
-        'info' => 'Wijaya Network',
-        'purpose' => 'SERVER PREMIUM'
-    ),
-    'Server ID 3' => array(
-        'ip' => 'id3.awh.my.id',
-        'port' => 80,
-        'info' => 'IDCloudHost',
-        'purpose' => 'SERVER PREMIUM'
-    ),
-    'Server ID 4' => array(
-        'ip' => 'id4.awh.my.id',
-        'port' => 80,
-        'info' => 'IDCloudHost',
-        'purpose' => 'SERVER PREMIUM'
-    ),
-    'Server ID 5' => array(
-        'ip' => 'id5.awh.my.id',
-        'port' => 80,
-        'info' => 'FFDCI',
-        'purpose' => 'SERVER PREMIUM'
-    ),
-    'Server ID 6' => array(
-        'ip' => 'id6.awh.my.id',
-        'port' => 80,
-        'info' => 'RUMAH WEB',
-        'purpose' => 'SERVER PREMIUM'
-    ),
-    'Server ID 7' => array(
-        'ip' => 'id7.awh.my.id',
-        'port' => 80,
-        'info' => 'RUMAH WEB',
-        'purpose' => 'SERVER PREMIUM'
-    )
-    
-);
-
-if (isset($_GET['host'])) {
-    $host = $_GET['host'];
-
-
-    if (isset($servers[$host])) {
-        header('Content-Type: application/json');
-
-        $return = array(
-            'status' => test($servers[$host])
-        );
-
-        echo json_encode($return);
-        exit;
-    } else {
-        header("HTTP/1.1 404 Not Found");
-    }
-}
-
-$names = array();
-foreach ($servers as $name => $info) {
-    $names[$name] = md5($name);
-}
-
-
-?>
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title><?php echo $title; ?></title>
+        <title>Server Uptime Status</title>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
         <style type="text/css">
@@ -97,7 +12,7 @@ foreach ($servers as $name => $info) {
     <body>
 
         <div class="container">
-            <h1><?php echo $title; ?></h1>
+            <h1>Server Uptime Status</h1>
             <table class="table">
                 <thead>
                     <tr>
@@ -109,17 +24,71 @@ foreach ($servers as $name => $info) {
                 </thead>
                 <tbody>
 
-                    <?php foreach ($servers as $name => $server): ?>
-
-                        <tr id="<?php echo md5($name); ?>">
+                    
+                        <tr id="bb149a60e36dad22aec22d6ee2620af0">
                             <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name"><?php echo $name; ?></td>
-                            <td><?php echo $server['info']; ?></td>
-                            <td><?php echo $server['purpose']; ?></td>
+                            <td class="name">Server ID</td>
+                            <td>FCCDCI</td>
+                            <td>SERVER PREMIUM</td>
                         </tr>
 
-                    <?php endforeach; ?>
+                    
+                        <tr id="bd80ab60d3c2d0a6b1ca7dad17614921">
+                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
+                            <td class="name">Server ID 1</td>
+                            <td>Y-NETWORKS</td>
+                            <td>SERVER PREMIUM</td>
+                        </tr>
 
+                    
+                        <tr id="2518fd3ef09e3cad5ffd4ba9aba09d32">
+                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
+                            <td class="name">Server ID 2</td>
+                            <td>Wijaya Network</td>
+                            <td>SERVER PREMIUM</td>
+                        </tr>
+
+                    
+                        <tr id="77b0f87829511d3b32786d884e0f466e">
+                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
+                            <td class="name">Server ID 3</td>
+                            <td>IDCloudHost</td>
+                            <td>SERVER PREMIUM</td>
+                        </tr>
+
+                    
+                        <tr id="f2f099328ded6b5ad104640d653bfc5b">
+                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
+                            <td class="name">Server ID 4</td>
+                            <td>IDCloudHost</td>
+                            <td>SERVER PREMIUM</td>
+                        </tr>
+
+                    
+                        <tr id="d9b8da5f578b9b4eba7f30b828ed613b">
+                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
+                            <td class="name">Server ID 5</td>
+                            <td>FFDCI</td>
+                            <td>SERVER PREMIUM</td>
+                        </tr>
+
+                    
+                        <tr id="ecb281a143b8e5d95a0c065846eb34e7">
+                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
+                            <td class="name">Server ID 6</td>
+                            <td>RUMAH WEB</td>
+                            <td>SERVER PREMIUM</td>
+                        </tr>
+
+                    
+                        <tr id="fa6a5dff06fbf07234d7aa7df56450d5">
+                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
+                            <td class="name">Server ID 7</td>
+                            <td>RUMAH WEB</td>
+                            <td>SERVER PREMIUM</td>
+                        </tr>
+
+                    
                 </tbody>
             </table>
         </div>
@@ -133,7 +102,7 @@ foreach ($servers as $name => $info) {
 
                 // fire off the request to /form.php
                 request = $.ajax({
-                    url: "<?php echo basename(__FILE__); ?>",
+                    url: "index.php",
                     type: "get",
                     data: {
                         host: host
@@ -174,7 +143,7 @@ foreach ($servers as $name => $info) {
 
             $(document).ready(function () {
 
-                var servers = <?php echo json_encode($names); ?>;
+                var servers = {"Server ID":"bb149a60e36dad22aec22d6ee2620af0","Server ID 1":"bd80ab60d3c2d0a6b1ca7dad17614921","Server ID 2":"2518fd3ef09e3cad5ffd4ba9aba09d32","Server ID 3":"77b0f87829511d3b32786d884e0f466e","Server ID 4":"f2f099328ded6b5ad104640d653bfc5b","Server ID 5":"d9b8da5f578b9b4eba7f30b828ed613b","Server ID 6":"ecb281a143b8e5d95a0c065846eb34e7","Server ID 7":"fa6a5dff06fbf07234d7aa7df56450d5"};
                 var server, hash;
 
                 for (var key in servers) {
@@ -196,25 +165,3 @@ foreach ($servers as $name => $info) {
 
     </body>
 </html>
-<?php
-/* Misc at the bottom */
-function test($server) {
-    $socket = @fsockopen($server['ip'], $server['port'], $errorNo, $errorStr, 3);
-    if ($errorNo == 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-function in_array_r($needle, $haystack, $strict = false) {
-    foreach ($haystack as $item) {
-        if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-?>
