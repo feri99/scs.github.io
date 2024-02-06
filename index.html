@@ -1,167 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Server Uptime Status</title>
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/cosmo/bootstrap.min.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
-        <style type="text/css">
-                /* Custom Styles */
-        </style>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Palestine - Indonesia Dukung Penuh Palestina Merdeka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-        <div class="container">
-            <h1>Server Uptime Status</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Host</th>
-                        <th>Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
+        header {
+            background-color: #008080;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
 
-                    
-                        <tr id="bb149a60e36dad22aec22d6ee2620af0">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID</td>
-                            <td>FCCDCI</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
+        section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 0 20px;
+        }
 
-                    
-                        <tr id="bd80ab60d3c2d0a6b1ca7dad17614921">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID 1</td>
-                            <td>Y-NETWORKS</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
+        h1 {
+            color: #008080;
+        }
 
-                    
-                        <tr id="2518fd3ef09e3cad5ffd4ba9aba09d32">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID 2</td>
-                            <td>Wijaya Network</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
+        p {
+            color: #666;
+        }
 
-                    
-                        <tr id="77b0f87829511d3b32786d884e0f466e">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID 3</td>
-                            <td>IDCloudHost</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1em auto;
+        }
 
-                    
-                        <tr id="f2f099328ded6b5ad104640d653bfc5b">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID 4</td>
-                            <td>IDCloudHost</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
+        footer {
+            background-color: #008080;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Free Palestine - Indonesia Dukung Penuh Palestina Merdeka</h1>
+    </header>
 
-                    
-                        <tr id="d9b8da5f578b9b4eba7f30b828ed613b">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID 5</td>
-                            <td>FFDCI</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
+    <section>
+        <img src="palestine.jpg" alt="Solidaritas Indonesia untuk Palestina">
+        <h2>Indonesia Bersatu untuk Palestina</h2>
+        <p>Indonesia mendukung penuh kemerdekaan Palestina. Bersama kita berdiri untuk keadilan dan perdamaian.</p>
+    </section>
 
-                    
-                        <tr id="ecb281a143b8e5d95a0c065846eb34e7">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID 6</td>
-                            <td>RUMAH WEB</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
-
-                    
-                        <tr id="fa6a5dff06fbf07234d7aa7df56450d5">
-                            <td><i class="icon-spinner icon-spin icon-large"></i></td>
-                            <td class="name">Server ID 7</td>
-                            <td>RUMAH WEB</td>
-                            <td>SERVER PREMIUM</td>
-                        </tr>
-
-                    
-                </tbody>
-            </table>
-        </div>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script type="text/javascript">
-
-            function test(host, hash) {
-                // Fork it
-                var request;
-
-                // fire off the request to /form.php
-                request = $.ajax({
-                    url: "index.php",
-                    type: "get",
-                    data: {
-                        host: host
-                    },
-                    beforeSend: function () {
-                        $('#' + hash).children().children().css({'visibility': 'visible'});
-                    }
-                });
-
-                // callback handler that will be called on success
-                request.done(function (response, textStatus, jqXHR) {
-                    var status = response.status;
-                    var statusClass;
-                    if (status) {
-                        statusClass = 'success';
-                    } else {
-                        statusClass = 'error';
-                    }
-
-                    $('#' + hash).removeClass('success error').addClass(statusClass);
-                });
-
-                // callback handler that will be called on failure
-                request.fail(function (jqXHR, textStatus, errorThrown) {
-                    // log the error to the console
-                    console.error(
-                        "The following error occured: " +
-                            textStatus, errorThrown
-                    );
-                });
-
-
-                request.always(function () {
-                    $('#' + hash).children().children().css({'visibility': 'hidden'});
-                })
-
-            }
-
-            $(document).ready(function () {
-
-                var servers = {"Server ID":"bb149a60e36dad22aec22d6ee2620af0","Server ID 1":"bd80ab60d3c2d0a6b1ca7dad17614921","Server ID 2":"2518fd3ef09e3cad5ffd4ba9aba09d32","Server ID 3":"77b0f87829511d3b32786d884e0f466e","Server ID 4":"f2f099328ded6b5ad104640d653bfc5b","Server ID 5":"d9b8da5f578b9b4eba7f30b828ed613b","Server ID 6":"ecb281a143b8e5d95a0c065846eb34e7","Server ID 7":"fa6a5dff06fbf07234d7aa7df56450d5"};
-                var server, hash;
-
-                for (var key in servers) {
-                    server = key;
-                    hash = servers[key];
-
-                    test(server, hash);
-                    (function loop(server, hash) {
-                        setTimeout(function () {
-                            test(server, hash);
-
-                            loop(server, hash);
-                        }, 6000);
-                    })(server, hash);
-                }
-
-            });
-        </script>
-
-    </body>
+    <footer>
+        &copy; 2024 Solidaritas Indonesia untuk Palestina
+    </footer>
+</body>
 </html>
