@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload IP and Exp Data</title>
+    <title>Manage IP and Exp Data</title>
 </head>
 <body>
-    <h1>Upload IP and Exp Data</h1>
+    <h1>Manage IP and Exp Data</h1>
     
-    <form action="process_data.sh" method="post" enctype="multipart/form-data">
-        <label for="ipFile">Upload IP File:</label>
-        <input type="file" name="ipFile" accept=".txt" required><br>
+    <form id="dataForm">
+        <label for="ip">IP Address:</label>
+        <input type="text" id="ip" name="ip" required><br>
 
-        <label for="expFile">Upload Exp File:</label>
-        <input type="file" name="expFile" accept=".txt" required><br>
+        <label for="exp">Expiration Date:</label>
+        <input type="text" id="exp" name="exp" required><br>
 
-        <button type="submit">Submit</button>
+        <button type="button" onclick="createData()">Create</button>
+        <button type="button" onclick="updateData()">Update</button>
+        <button type="button" onclick="deleteData()">Delete</button>
     </form>
+
+    <h2>Current Data</h2>
+    <pre id="currentData"></pre>
+
+    <script src="script.js"></script>
 </body>
 </html>
