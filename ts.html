@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload IP and Exp Data</title>
+</head>
+<body>
+    <h1>Upload IP and Exp Data</h1>
+    
+    <form action="process_data.sh" method="post" enctype="multipart/form-data">
+        <label for="ipFile">Upload IP File:</label>
+        <input type="file" name="ipFile" accept=".txt" required><br>
+
+        <label for="expFile">Upload Exp File:</label>
+        <input type="file" name="expFile" accept=".txt" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
